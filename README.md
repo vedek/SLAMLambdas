@@ -28,3 +28,8 @@ BreezySLAM includes Python support for the inexpensive XV Lidar from GetSurreal.
 
 Testing with the SLAMTEC RPLidar A1
 BreezySLAM also includes Python support for the inexpensive RPLidar A1 from SLAMTECH. To try it out, you'll also need the rplidar Python package. Once you've installed that package, you can run the rpslam.py example in the BreezySLAM/examples folder.
+
+Adding new particle filters
+Because it is built on top of the CoreSLAM (tinySLAM) code base, BreezySLAM provides a clean separation between the map-building and particle-filtering (Monte Carlo position estimation) components of SLAM. To add a new particle filter, you can subclass breezyslam.algorithms.CoreSLAM or breezyslam.algorithms.SinglePositionSLAM classes, implementing the relevant methods.
+
+
