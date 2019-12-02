@@ -1,7 +1,9 @@
 # SLAMLambdas
 SLAM Lambdas is   a walk-through of  SLAM code for LiDAR/Ultrasound or Camera based sensor integration with a point cloud and SLAM filters, particle or kalman or any other filter usable with AR.
 
-Installing for Python
+Translation of code from Python to JS using Brython, https://brython.info/tests/editor.html?lang=en
+
+#Installing for Python
 The BreezySLAM installation uses the popular distutils approach to installing Python packages, so all you should have to do is download and unzip the file, cd to BreezySLAM/python, and do
 
 sudo python3 setup.py install
@@ -20,16 +22,16 @@ To see what other features are available, do
 pydoc3 breezyslam
 By using the component classes Map, Scan, and Position and the distanceScanToMap() method, you can develop new algorithms and particle filters of your own.
 
-Testing with the Hokuyo URG04LX
+#Testing with the Hokuyo URG04LX
 If you're running on Linux, you can install the BreezyLidar package, the OpenCV Python package, and try the urgslam.py example in the examples folder.
 
-Testing with the GetSurreal XV Lidar
+#Testing with the GetSurreal XV Lidar
 BreezySLAM includes Python support for the inexpensive XV Lidar from GetSurreal. To try it out, you'll also need the xvlidar Python package. Once you've installed both packages, you can run the xvslam.py example in the BreezySLAM/examples folder.
 
-Testing with the SLAMTEC RPLidar A1
+#Testing with the SLAMTEC RPLidar A1
 BreezySLAM also includes Python support for the inexpensive RPLidar A1 from SLAMTECH. To try it out, you'll also need the rplidar Python package. Once you've installed that package, you can run the rpslam.py example in the BreezySLAM/examples folder.
 
-Adding new particle filters
+#Adding new particle filters
 Because it is built on top of the CoreSLAM (tinySLAM) code base, BreezySLAM provides a clean separation between the map-building and particle-filtering (Monte Carlo position estimation) components of SLAM. To add a new particle filter, you can subclass breezyslam.algorithms.CoreSLAM or breezyslam.algorithms.SinglePositionSLAM classes, implementing the relevant methods.
 
 
