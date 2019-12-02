@@ -34,4 +34,15 @@ BreezySLAM also includes Python support for the inexpensive RPLidar A1 from SLAM
 #Adding new particle filters
 Because it is built on top of the CoreSLAM (tinySLAM) code base, BreezySLAM provides a clean separation between the map-building and particle-filtering (Monte Carlo position estimation) components of SLAM. To add a new particle filter, you can subclass breezyslam.algorithms.CoreSLAM or breezyslam.algorithms.SinglePositionSLAM classes, implementing the relevant methods.
 
+#CodeWalkthrough
+The two primary classes for adding new Lambdas are CoreSLAM and SinglePositionSLAM.
+To add a new particle filter, 
+you can subclass breezyslam.algorithms.CoreSLAM or breezyslam.algorithms.SinglePositionSLAM classes, implementing the relevant methods.
 
+The primary classes are Map, Scan, and Position and the distanceScanToMap() method,
+Map: 
+Scan:
+Position:
+distanceScanToMap():
+
+#Reactive++ Programming.
